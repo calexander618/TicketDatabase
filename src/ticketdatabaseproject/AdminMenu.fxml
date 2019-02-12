@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ticketdatabaseproject.AdminMenuController">
+   <children>
+      <VBox alignment="CENTER" layoutX="102.0" layoutY="9.0" prefHeight="179.0" prefWidth="403.0">
+         <children>
+            <Label text="Administrator Panel">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="50.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="27.0" prefWidth="400.0">
+               <children>
+                  <ChoiceBox fx:id="choiceBox" prefHeight="27.0" prefWidth="101.0" />
+                  <TextField fx:id="textField" prefHeight="36.0" prefWidth="248.0" promptText="..." />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="insertRadioButton" mnemonicParsing="false" text="Insert" />
+                  <RadioButton fx:id="deleteRadioButton" mnemonicParsing="false" text="Delete">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <Button fx:id="executeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleExecute" prefHeight="9.0" prefWidth="69.0" text="Execute">
+                     <HBox.margin>
+                        <Insets left="50.0" right="54.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="30.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="351.0" spacing="30.0">
+               <children>
+                  <Button fx:id="initializeDBButton" mnemonicParsing="false" onAction="#handleInitializeDB" text="InitializeDB" />
+                  <Button fx:id="populateTablesButton" mnemonicParsing="false" onAction="#handlePopulateTables" text="PopulateTables" />
+               </children>
+               <padding>
+                  <Insets right="54.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
